@@ -26,6 +26,6 @@ export default class {
      */
     proxies(callback: (error: any, response: Response, body: any) => void): void {
         this.host.set('endpoint', '/proxies');
-        Request.get(this.host, callback)
+        Request.get(this.host.href, callback)
     }
 }
