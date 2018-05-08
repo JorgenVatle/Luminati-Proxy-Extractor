@@ -29,6 +29,6 @@
     "cli": "^1.0.1"
   },
   "bin": {
-    "lmp-extract": "dist/index.js"
+    "lmp-extract": "bin/run"
   }
 }
