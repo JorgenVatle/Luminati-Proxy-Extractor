@@ -1,5 +1,5 @@
 import UrlParse from 'url-parse';
-import Request from 'request';
+import Request, {Response} from 'request';
 
 export default class {
 
@@ -24,7 +24,7 @@ export default class {
      *
      * @param callback()
      */
-    proxies(callback: () => void): void {
+    proxies(callback: (error: any, response: Response, body: any) => void): void {
         this.host.set('endpoint', '/proxies');
         Request.get(this.host, callback)
     }
