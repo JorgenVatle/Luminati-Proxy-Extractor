@@ -38,7 +38,7 @@ export default class {
      * @param callback()
      */
     proxies(callback: (error: any, response: Response, body: any) => void): void {
-        this.host.set('endpoint', '/proxies');
+        this.setEndpoint('/proxies');
         Request.get(this.host.href, callback)
     }
 }
