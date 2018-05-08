@@ -1,0 +1,28 @@
+{
+  "name": "luminati-proxy-extractor",
+  "version": "1.0.0",
+  "description": "Quickly generate a list of proxies available through your Luminati Proxy Manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgenVatle/Luminati-Proxy-Extractor.git"
+  },
+  "keywords": [
+    "Luminati",
+    "Proxy",
+    "Extractor",
+    "Luminati",
+    "Proxy",
+    "Manager",
+    "LPM"
+  ],
+  "author": "Jorgen@WcAServices.net",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JorgenVatle/Luminati-Proxy-Extractor/issues"
+  },
+  "homepage": "https://github.com/JorgenVatle/Luminati-Proxy-Extractor#readme"
+}
