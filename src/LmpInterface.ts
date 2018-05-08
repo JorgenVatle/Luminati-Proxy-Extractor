@@ -24,8 +24,8 @@ export default class {
      *
      * @param callback()
      */
-    proxies(callback: () => {}): void {
+    proxies(callback: () => void): void {
         this.host.set('endpoint', '/proxies');
-        const request = Request.get(this.host, callback())
+        Request.get(this.host, callback)
     }
 }
