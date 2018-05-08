@@ -17,6 +17,10 @@ export default class {
      */
     constructor(host: string) {
         this.host = UrlParse(host, true);
+
+        if (!this.host.protocol) {
+            this.host.set('protocol', 'http');
+        }
     }
 
     /**
