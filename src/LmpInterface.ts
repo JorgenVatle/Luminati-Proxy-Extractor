@@ -14,9 +14,12 @@ export default class {
      * LmpInterface constructor
      *
      * @param {string} host
+     * @param {number} port
      */
-    constructor(host: string) {
+    constructor(host: string, port: number) {
         this.host = UrlParse(host, true);
+
+        this.host.set('port', port);
 
         if (!this.host.protocol) {
             this.host.set('protocol', 'http');
