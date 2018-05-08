@@ -24,6 +24,15 @@ export default class {
     }
 
     /**
+     * Sets the current host path to the given API endpoint.
+     *
+     * @param {string} endpoint
+     */
+    protected setPath(endpoint: string): void {
+        this.host.set('pathname', `/api/${endpoint}`);
+    }
+
+    /**
      * Fetches proxies from the current Luminati Proxy Manager Host.
      *
      * @param callback()
