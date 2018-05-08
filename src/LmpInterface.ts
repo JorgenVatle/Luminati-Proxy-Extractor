@@ -28,7 +28,7 @@ export default class {
      *
      * @param {string} endpoint
      */
-    protected setPath(endpoint: string): void {
+    protected setEndpoint(endpoint: string): void {
         this.host.set('pathname', `/api/${endpoint}`);
     }
 
