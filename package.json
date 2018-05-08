@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/JorgenVatle/Luminati-Proxy-Extractor/issues"
   },
-  "homepage": "https://github.com/JorgenVatle/Luminati-Proxy-Extractor#readme"
+  "homepage": "https://github.com/JorgenVatle/Luminati-Proxy-Extractor#readme",
+  "dependencies": {
+    "cli": "^1.0.1"
+  }
 }
