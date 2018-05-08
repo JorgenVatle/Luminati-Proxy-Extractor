@@ -1,4 +1,5 @@
 import * as CLI from 'cli';
+import LmpInterface from "./LmpInterface";
 
 const Package = require('../package.json');
 
@@ -16,3 +17,9 @@ const args = CLI.parse({
 });
 
 console.log('Pulling proxies from:', args.manager);
+
+const Lmp = new LmpInterface(args.manager, args.managerPort);
+
+Lmp.proxies((error, response, body) => {
+    console.log(error, response, body);
+});
