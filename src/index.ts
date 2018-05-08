@@ -10,7 +10,8 @@ CLI.setApp(Package.name, Package.version);
 
 // Command line arguments
 const args = CLI.parse({
-    manager: ['m', 'Luminati Proxy Manager hostname.', 'string', '127.0.0.1:22999'],
+    manager: ['m', 'Luminati Proxy Manager hostname.', 'string', '127.0.0.1'],
+    managerPort: ['p', 'Luminati Proxy Manager port', 'number', 22999],
     output: ['o', 'Proxy output path.', 'string', `./luminati-proxies-${Date.now()}.txt`]
 });
 
