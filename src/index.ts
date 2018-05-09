@@ -37,7 +37,7 @@ Lmp.proxies(args.onlyRunning, (error, response, body) => {
         CLI.fatal('Non-parsed response body received. Are you sure you used your Luminati Proxy Manager IP?');
     }
 
-    CLI.ok(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
+    CLI.info(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
 
     FS.writeFile(args.output, LmpInterface.buildProxies(body), (error) => {
         if (error) {
