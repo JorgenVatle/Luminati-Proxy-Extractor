@@ -39,7 +39,7 @@ Lmp.proxies(args.onlyRunning, (error, response, body) => {
 
     CLI.info(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
 
-    FS.writeFile(args.output, LmpInterface.buildProxies(body), (error) => {
+    FS.writeFile(args.output, LmpInterface.buildProxies(body, args.hostname), (error) => {
         if (error) {
             CLI.fatal(error.toString());
         }
