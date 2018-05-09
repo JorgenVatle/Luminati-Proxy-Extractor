@@ -17,7 +17,7 @@ const args = CLI.parse({
     onlyRunning: ['r', 'Extract running proxies only?', 'boolean', true],
 });
 
-console.log('Pulling proxies from:', args.manager);
+CLI.info(`Pulling proxies from: ${args.manager}`);
 
 const Lmp = new LmpInterface(args.manager, args.managerPort);
 
