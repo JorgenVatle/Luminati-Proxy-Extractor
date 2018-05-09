@@ -24,8 +24,7 @@ const Lmp = new LmpInterface(args.manager, args.managerPort);
 
 Lmp.proxies(args.onlyRunning, (error, response, body) => {
     if (error) {
-        CLI.error(error);
-        return;
+        CLI.fatal(error);
     }
 
     if (!body) {
