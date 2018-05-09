@@ -38,9 +38,10 @@ export default class {
     /**
      * Fetches proxies from the current Luminati Proxy Manager Host.
      *
+     * @param {boolean} onlyRunning
      * @param callback()
      */
-    proxies(callback: (error: any, response: Response, body: any) => void): void {
+    proxies(onlyRunning: boolean, callback: (error: any, response: Response, body: any) => void): void {
         this.setEndpoint('/proxies');
         Request.get(this.host.href, callback)
     }

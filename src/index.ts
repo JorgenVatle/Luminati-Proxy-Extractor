@@ -21,6 +21,6 @@ console.log('Pulling proxies from:', args.manager);
 
 const Lmp = new LmpInterface(args.manager, args.managerPort);
 
-Lmp.proxies((error, response, body) => {
+Lmp.proxies(args.onlyRunning, (error, response, body) => {
     console.log(error, response, body);
 });
