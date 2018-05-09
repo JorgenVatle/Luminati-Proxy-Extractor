@@ -41,7 +41,7 @@ export default class {
      * @param {boolean} onlyRunning
      * @param callback()
      */
-    proxies(onlyRunning: boolean, callback: (error: any, response: Response, body: any) => void): void {
+    public proxies(onlyRunning: boolean, callback: (error: any, response: Response, body: any) => void): void {
         this.setEndpoint('/proxies');
 
         if (onlyRunning) {
