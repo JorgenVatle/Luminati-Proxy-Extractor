@@ -1,5 +1,7 @@
 # Luminati-Proxy-Extractor
 
+Quickly grab all available proxies through all ports on your local Luminati Proxy Manager API.
+
 ### Installation
 ```bash
 npm install -g luminati-proxy-extractor
