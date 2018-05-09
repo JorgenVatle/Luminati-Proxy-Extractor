@@ -2,6 +2,10 @@
 
 Quickly grab all available proxies through all ports on your local Luminati Proxy Manager API.
 
+### Requirements
+- [npm](https://www.npmjs.com/get-npm) v4.6.1 or higher.
+
+
 ### Installation
 ```bash
 npm install -g luminati-proxy-extractor
