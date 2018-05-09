@@ -1,4 +1,5 @@
 import * as CLI from 'cli';
+import FS from 'fs';
 import LmpInterface from "./LmpInterface";
 import Pluralize from 'pluralize';
 
@@ -37,4 +38,12 @@ Lmp.proxies(args.onlyRunning, (error, response, body) => {
     }
 
     CLI.ok(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
+
+    FS.writeFile(args.output, LmpInterface.buildProxies(body), (error) => {
+        if (error) {
+            CLI.fatal(error.toString());
+        }
+
+        CLI.ok(`Stored proxies in ${args.output}!`);
+    });
 });
