@@ -43,6 +43,11 @@ export default class {
      */
     proxies(onlyRunning: boolean, callback: (error: any, response: Response, body: any) => void): void {
         this.setEndpoint('/proxies');
+
+        if (onlyRunning) {
+            this.setEndpoint('/proxies_running');
+        }
+
         Request.get(this.host.href, callback)
     }
 }
