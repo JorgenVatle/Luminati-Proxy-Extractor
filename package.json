@@ -1,6 +1,6 @@
 {
   "name": "luminati-proxy-extractor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Quickly generate a list of proxies available through your Luminati Proxy Manager.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
