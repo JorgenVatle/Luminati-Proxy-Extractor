@@ -32,5 +32,9 @@ Lmp.proxies(args.onlyRunning, (error, response, body) => {
         return;
     }
 
+    if (typeof body !== 'object') {
+        CLI.fatal('Non-parsed response body received. Are you sure you used your Luminati Proxy Manager IP?');
+    }
+
     CLI.ok(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
 });
