@@ -14,11 +14,11 @@ $ npm install -g luminati-proxy-extractor
 ```
 
 ### Usage
-Run `lmp-extract -h` from the command line for a list of options.
+Run `lpm-extract -h` from the command line for a list of options.
 By default, it'll pull only running proxies from your `127.0.0.1:22999` LPM proxy manager. 
 ```
 Usage:
-  lmp-extract [OPTIONS] [ARGS]
+  lpm-extract [OPTIONS] [ARGS]
 
 Options:
   -m, --manager     [STRING]    Luminati Proxy Manager hostname.    (Default is 127.0.0.1)

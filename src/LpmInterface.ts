@@ -1,7 +1,7 @@
 import UrlParse from 'url-parse';
 import Request, {Response} from 'request';
 
-import {LmpProxies, LmpProxy, localhost} from "./types/LmpInterface";
+import {LpmProxies, LpmProxy, localhost} from "./types/LpmInterface";
 
 export default class {
 
@@ -13,7 +13,7 @@ export default class {
     protected host: any;
 
     /**
-     * LmpInterface constructor
+     * LpmInterface constructor
      *
      * @param {string} host
      * @param {number} port
@@ -59,14 +59,14 @@ export default class {
     /**
      * Builds proxies from a Luminati Proxy Manager/proxies API output.
      *
-     * @param {LmpProxies} proxies
+     * @param {LpmProxies} proxies
      * @param {localhost} host
      * @return {string}
      */
-    public static buildProxies(proxies: LmpProxies, host: localhost = '127.0.0.1') {
+    public static buildProxies(proxies: LpmProxies, host: localhost = '127.0.0.1') {
         let output = '';
 
-        proxies.forEach((proxy: LmpProxy) => {
+        proxies.forEach((proxy: LpmProxy) => {
             const ip = proxy.iface === '0.0.0.0' ? host : proxy.iface;
             output += `${ip}:${proxy.port}\n`
         });

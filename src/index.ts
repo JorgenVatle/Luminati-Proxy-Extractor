@@ -1,6 +1,6 @@
 import * as CLI from 'cli';
 import FS from 'fs';
-import LmpInterface from "./LmpInterface";
+import LpmInterface from "./LpmInterface";
 import Pluralize from 'pluralize';
 
 const Package = require('../package.json');
@@ -21,9 +21,9 @@ const args = CLI.parse({
 
 CLI.info(`Pulling proxies from: ${args.manager}`);
 
-const Lmp = new LmpInterface(args.manager, args.managerPort);
+const Lpm = new LpmInterface(args.manager, args.managerPort);
 
-Lmp.proxies(args.onlyRunning, (error, response, body) => {
+Lpm.proxies(args.onlyRunning, (error, response, body) => {
     if (error) {
         CLI.fatal(error);
     }
@@ -39,7 +39,7 @@ Lmp.proxies(args.onlyRunning, (error, response, body) => {
 
     CLI.info(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
 
-    FS.writeFile(args.output, LmpInterface.buildProxies(body, args.hostname), (error) => {
+    FS.writeFile(args.output, LpmInterface.buildProxies(body, args.hostname), (error) => {
         if (error) {
             CLI.fatal(error.toString());
         }
