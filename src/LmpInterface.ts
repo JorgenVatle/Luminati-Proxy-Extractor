@@ -64,7 +64,7 @@ export default class {
      * @param {localhost} host
      * @return {string}
      */
-    public static buildProxies(proxies: LmpProxies, host: localhost) {
+    public static buildProxies(proxies: LmpProxies, host?: localhost) {
         let output = '';
 
         proxies.forEach((proxy: LmpProxy) => {
