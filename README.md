@@ -20,3 +20,6 @@ Options:
   -v, --version          Display the current version
   -h, --help             Display help and usage details
 ```
+
+### License
+MIT
