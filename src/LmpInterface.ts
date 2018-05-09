@@ -50,7 +50,10 @@ export default class {
             this.setEndpoint('/proxies_running');
         }
 
-        Request.get(this.host.href, callback)
+        Request.get({
+            url: this.host.href,
+            json: true,
+        }, callback);
     }
 
 
