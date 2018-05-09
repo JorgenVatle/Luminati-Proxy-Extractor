@@ -10,7 +10,7 @@ The feature can be found in the *General* settings tab after opening the configu
 
 ### Installation
 ```bash
-npm install -g luminati-proxy-extractor
+$ npm install -g luminati-proxy-extractor
 ```
 
 ### Usage
