@@ -4,3 +4,5 @@ export type LmpProxy = {
     iface: localhost | string,
     port: number,
 }
+
+export type LmpProxies = Array<LmpProxy>;
