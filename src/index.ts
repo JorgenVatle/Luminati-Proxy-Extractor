@@ -1,5 +1,6 @@
 import * as CLI from 'cli';
 import LmpInterface from "./LmpInterface";
+import Pluralize from 'pluralize';
 
 const Package = require('../package.json');
 
@@ -22,5 +23,15 @@ CLI.info(`Pulling proxies from: ${args.manager}`);
 const Lmp = new LmpInterface(args.manager, args.managerPort);
 
 Lmp.proxies(args.onlyRunning, (error, response, body) => {
-    console.log(error, response, body);
+    if (error) {
+        CLI.error(error);
+        return;
+    }
+
+    if (!body) {
+        CLI.info(`Did not receive any proxies from the given manager. (${args.manager}:${args.managerPort})`);
+        return;
+    }
+
+    CLI.ok(`Successfully pulled ${Pluralize('proxies', body.length, true)} from the proxy manager.`);
 });
