@@ -21,5 +21,9 @@ Options:
   -h, --help             Display help and usage details
 ```
 
+### Links
+- [Luminati Website](https://luminati.io)
+- [Luminati Proxy Manager](https://github.com/luminati-io/luminati-proxy)
+
 ### License
 MIT
