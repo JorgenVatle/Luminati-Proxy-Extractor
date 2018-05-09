@@ -56,7 +56,6 @@ export default class {
         }, callback);
     }
 
-
     /**
      * Builds proxies from a Luminati Proxy Manager/proxies API output.
      *
