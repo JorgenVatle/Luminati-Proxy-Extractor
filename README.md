@@ -15,7 +15,7 @@ $ npm install -g luminati-proxy-extractor
 
 ### Usage
 Run `lpm-extract -h` from the command line for a list of options.
-By default, it'll pull only running proxies from your `127.0.0.1:22999` LPM proxy manager. 
+By default, it'll pull only running proxies from your Luminati proxy manager hosted at `127.0.0.1:22999`. 
 ```
 Usage:
   lpm-extract [OPTIONS] [ARGS]
