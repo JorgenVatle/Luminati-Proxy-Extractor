@@ -1,6 +1,6 @@
 # Luminati-Proxy-Extractor
-[![Downloads](https://img.shields.io/npm/dt/luminati-proxy-extractor.svg?style=for-the-badge)](https://www.npmjs.com/package/luminati-proxy-extractor)
-[![Version](https://img.shields.io/npm/v/luminati-proxy-extractor.svg?style=for-the-badge)](https://www.npmjs.com/package/luminati-proxy-extractor)
+[![Downloads](https://img.shields.io/npm/dt/luminati-proxy-extractor.svg)](https://www.npmjs.com/package/luminati-proxy-extractor)
+[![Version](https://img.shields.io/npm/v/luminati-proxy-extractor.svg)](https://www.npmjs.com/package/luminati-proxy-extractor)
 
 
 Quickly grab all available proxies through all ports on your local/remote Luminati Proxy Manager API.
